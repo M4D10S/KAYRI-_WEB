@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kayri Essence | Shows para Eventos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- CANVAS PARTICLES -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="-60 -140 120 250" role="img" aria-label="Kayri Essence">
+        <defs>
+          <linearGradient id="gK" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"   stop-color="#F7C832"/>
+            <stop offset="40%"  stop-color="#D040B0"/>
+            <stop offset="100%" stop-color="#38D4F5"/>
+          </linearGradient>
+          <linearGradient id="gCr" x1="20%" y1="0%" x2="80%" y2="100%">
+            <stop offset="0%"   stop-color="#F7C832"/>
+            <stop offset="100%" stop-color="#C88A10"/>
+          </linearGradient>
+          <linearGradient id="gArc" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"  stop-color="#D040B0"/>
+            <stop offset="100%" stop-color="#38D4F5"/>
+          </linearGradient>
+        </defs>
+        <path d="M-36,-76 Q0,-88 36,-76" fill="none" stroke="url(#gArc)" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M-34,-78 L-34,-108 L-18,-94 L0,-120 L18,-94 L34,-108 L34,-78"
+              fill="none" stroke="url(#gCr)" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="-34" cy="-110" r="3"   fill="#F7C832"/>
+        <circle cx="0"   cy="-122" r="3.5" fill="#F7C832"/>
+        <circle cx="34"  cy="-110" r="3"   fill="#F7C832"/>
+        <rect x="-44" y="-90" width="20" height="180" rx="5" fill="url(#gK)"/>
+        <polygon points="-24,-8  -24,14  44,-68  44,-90" fill="url(#gK)"/>
+        <polygon points="-24,8  -24,-14  44,68  44,90"   fill="url(#gK)"/>
+      </svg>
+      <span class="logo-text">KAYRI ESSENCE</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#por-que" class="nav-link">¿Por qué elegirnos?</a></li>
+        <li><a href="#contacto" class="nav-link nav-cta">Reserva Ahora</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-glow glow-1"></div>
+    <div class="hero-bg-glow glow-2"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Shows profesionales para cada ocasión</p>
+      <h1 class="hero-title reveal">
+        <span class="line-1">TU FIESTA,</span>
+        <span class="line-2 gradient-text">NUESTRA ESENCIA</span>
+      </h1>
+      <p class="hero-sub reveal">
+        Creamos experiencias que tus invitados recordarán por siempre.<br />
+        Energía, emoción y espectáculo desde el primer segundo.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#servicios" class="btn btn-primary">Ver Shows</a>
+        <a href="#contacto" class="btn btn-ghost">Reservar Ahora</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── MARQUEE STRIP ── -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>Hora Loca</span><span>✦</span>
+      <span>Shows de Ingreso</span><span>✦</span>
+      <span>Quinceañeras</span><span>✦</span>
+      <span>Bodas</span><span>✦</span>
+      <span>Cumpleaños</span><span>✦</span>
+      <span>Maestro de Ceremonia</span><span>✦</span>
+      <span>Hora Loca Infantil</span><span>✦</span>
+      <span>Eventos Corporativos</span><span>✦</span>
+      <span>Hora Loca</span><span>✦</span>
+      <span>Shows de Ingreso</span><span>✦</span>
+      <span>Quinceañeras</span><span>✦</span>
+      <span>Bodas</span><span>✦</span>
+      <span>Cumpleaños</span><span>✦</span>
+      <span>Maestro de Ceremonia</span><span>✦</span>
+      <span>Hora Loca Infantil</span><span>✦</span>
+      <span>Eventos Corporativos</span><span>✦</span>
+    </div>
+  </div>
+
+  <!-- ── NOSOTROS ── -->
+  <section class="section nosotros" id="nosotros">
+    <div class="container">
+      <div class="nosotros-grid">
+        <div class="nosotros-text reveal">
+          <p class="section-eyebrow">Quiénes somos</p>
+          <h2 class="section-title">Somos el show que le faltaba a tu evento</h2>
+          <p class="body-text">
+            En <strong>Kayri Essence</strong> nos dedicamos exclusivamente a crear shows de impacto: 
+            desde el ingreso que eriza la piel hasta la hora loca que nadie quiere que termine. 
+            Cada presentación es diseñada a medida para ti.
+          </p>
+          <p class="body-text">
+            No somos animadores genéricos. Somos artistas que se convierten en el corazón 
+            de tu celebración, con coreografías, vestuario y energía de nivel profesional.
+          </p>
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-num gradient-text">500+</span>
+              <span class="stat-label">Eventos realizados</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num gradient-text">100%</span>
+              <span class="stat-label">Clientes satisfechos</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num gradient-text">5★</span>
+              <span class="stat-label">Valoración</span>
+            </div>
+          </div>
+        </div>
+        <div class="nosotros-visual reveal">
+          <div class="visual-card card-main">
+            <div class="card-glow"></div>
+            <div class="card-icon">👑</div>
+            <h3>Kayri Essence</h3>
+            <p>Shows de Hora Loca & Eventos</p>
+          </div>
+          <div class="visual-card card-float card-f1">
+            <span class="float-icon">🎭</span>
+            <span>Shows únicos</span>
+          </div>
+          <div class="visual-card card-float card-f2">
+            <span class="float-icon">✨</span>
+            <span>Momentos mágicos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICIOS ── -->
+  <section class="section servicios" id="servicios">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Lo que hacemos</p>
+        <h2 class="section-title">Nuestros Shows</h2>
+        <p class="section-desc">Cada servicio está diseñado para transformar tu evento en algo extraordinario</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal" data-delay="0">
+          <div class="service-icon-wrap">
+            <div class="service-icon">🎉</div>
+          </div>
+          <div class="service-tag">El más solicitado</div>
+          <h3 class="service-title">Hora Loca</h3>
+          <p class="service-desc">
+            El momento más explosivo de la noche. Robots LED, mascotas, bailarines, zancos, 
+            confeti y accesorios que convierten tu fiesta en un espectáculo de otro nivel.
+          </p>
+          <ul class="service-features">
+            <li>Robots LED de impacto visual</li>
+            <li>Bailarines con coreografías personalizadas</li>
+            <li>Mascotas y personajes temáticos</li>
+            <li>Zancos, globos, confeti y más</li>
+            <li>Sistema de audio y efectos especiales</li>
+          </ul>
+          <div class="service-ideal">
+            <span>Ideal para:</span> Bodas · Quinceañeras · Cumpleaños · Corporativos
+          </div>
+          <a href="#contacto" class="btn btn-service">Cotizar</a>
+        </div>
+
+        <div class="service-card reveal featured-card" data-delay="100">
+          <div class="featured-badge">PACK PREMIUM</div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">🌟</div>
+          </div>
+          <h3 class="service-title">Hora Loca Infantil</h3>
+          <p class="service-desc">
+            Una versión mágica y colorida pensada para los más pequeños. Personajes adorables, 
+            juegos interactivos y energía pura que mantiene a los niños bailando toda la tarde.
+          </p>
+          <ul class="service-features">
+            <li>Personajes y mascotas infantiles</li>
+            <li>Juegos y dinámicas para niños</li>
+            <li>Música y canciones especiales</li>
+            <li>Accesorios y sorpresas visuales</li>
+            <li>Ambiente seguro y divertido</li>
+          </ul>
+          <div class="service-ideal">
+            <span>Ideal para:</span> Cumpleaños infantiles · Fiestas temáticas
+          </div>
+          <a href="#contacto" class="btn btn-primary">Cotizar</a>
+        </div>
+
+        <div class="service-card reveal" data-delay="200">
+          <div class="service-icon-wrap">
+            <div class="service-icon">👸</div>
+          </div>
+          <h3 class="service-title">Show de Ingreso — Quinceañera</h3>
+          <p class="service-desc">
+            El ingreso que ella merece. Coreografías personalizadas con chambelanes, 
+            efectos visuales, música que la representa y una entrada que nadie olvidará jamás.
+          </p>
+          <ul class="service-features">
+            <li>Coreografía diseñada a tu estilo</li>
+            <li>Coordinación con chambelanes</li>
+            <li>Música personalizada que te representa</li>
+            <li>Luces, vestuario y efectos especiales</li>
+            <li>Ensayos previos incluidos</li>
+          </ul>
+          <div class="service-ideal">
+            <span>Ideal para:</span> Quinceañeros (15 años)
+          </div>
+          <a href="#contacto" class="btn btn-service">Cotizar</a>
+        </div>
+
+        <div class="service-card reveal" data-delay="0">
+          <div class="service-icon-wrap">
+            <div class="service-icon">🤵</div>
+          </div>
+          <h3 class="service-title">Show de Ingreso — 18 Años</h3>
+          <p class="service-desc">
+            Para los varones que merecen una entrada épica. Energía, actitud y estilo 
+            en un show de ingreso que marca el inicio de una noche legendaria.
+          </p>
+          <ul class="service-features">
+            <li>Show de ingreso con coreografía</li>
+            <li>Estilo urbano, clásico o cowboy</li>
+            <li>Música y efectos personalizados</li>
+            <li>Coordinación con el homenajeado</li>
+          </ul>
+          <div class="service-ideal">
+            <span>Ideal para:</span> Cumpleaños 18 años (varones)
+          </div>
+          <a href="#contacto" class="btn btn-service">Cotizar</a>
+        </div>
+
+        <div class="service-card reveal" data-delay="100">
+          <div class="service-icon-wrap">
+            <div class="service-icon">🎤</div>
+          </div>
+          <h3 class="service-title">Maestro de Ceremonias</h3>
+          <p class="service-desc">
+            La voz y presencia que conduce tu evento con carisma, precisión y elegancia. 
+            Mantenemos el ritmo de la noche y hacemos que cada momento fluya perfecto.
+          </p>
+          <ul class="service-features">
+            <li>Conducción profesional del evento</li>
+            <li>Presentaciones y anuncios</li>
+            <li>Manejo del tiempo y la energía</li>
+            <li>Adaptado al estilo del evento</li>
+          </ul>
+          <div class="service-ideal">
+            <span>Ideal para:</span> Bodas · Quinceañeras · Corporativos · Graduaciones
+          </div>
+          <a href="#contacto" class="btn btn-service">Cotizar</a>
+        </div>
+
+        <div class="service-card reveal" data-delay="200">
+          <div class="service-icon-wrap">
+            <div class="service-icon">💃</div>
+          </div>
+          <h3 class="service-title">Coreografías Especiales</h3>
+          <p class="service-desc">
+            Shows coreografiados para cualquier momento especial: sorpresas, shows temáticos, 
+            presentaciones artísticas y más. Si lo imaginas, nosotros lo ejecutamos.
+          </p>
+          <ul class="service-features">
+            <li>Diseño coreográfico a medida</li>
+            <li>Vestuario y ambientación</li>
+            <li>Para cualquier tipo de evento</li>
+            <li>Shows de sorpresa incluidos</li>
+          </ul>
+          <div class="service-ideal">
+            <span>Ideal para:</span> Todo tipo de eventos y celebraciones
+          </div>
+          <a href="#contacto" class="btn btn-service">Cotizar</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── POR QUÉ ELEGIRNOS ── -->
+  <section class="section por-que" id="por-que">
+    <div class="por-que-bg"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Por qué Kayri Essence</p>
+        <h2 class="section-title">Lo que nos hace diferentes</h2>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar reveal" data-delay="0">
+          <div class="pillar-icon">🏆</div>
+          <h3>Experiencia que se siente</h3>
+          <p>Años de shows en Lima nos han dado el ojo para leer cada evento y adaptarnos al instante.</p>
+        </div>
+        <div class="pillar reveal" data-delay="100">
+          <div class="pillar-icon">🎯</div>
+          <h3>100% personalizado</h3>
+          <p>No existe un show igual a otro. Cada presentación se construye desde cero para ti.</p>
+        </div>
+        <div class="pillar reveal" data-delay="200">
+          <div class="pillar-icon">⏰</div>
+          <h3>Puntualidad y compromiso</h3>
+          <p>Llegamos antes para asegurarnos que todo esté listo. Tu tranquilidad, nuestra prioridad.</p>
+        </div>
+        <div class="pillar reveal" data-delay="300">
+          <div class="pillar-icon">👥</div>
+          <h3>Equipo profesional</h3>
+          <p>Artistas, bailarines y técnicos con experiencia real en eventos de alto nivel.</p>
+        </div>
+        <div class="pillar reveal" data-delay="400">
+          <div class="pillar-icon">💡</div>
+          <h3>Producción completa</h3>
+          <p>Luces, audio, vestuario y efectos. Llevamos todo lo necesario para el espectáculo.</p>
+        </div>
+        <div class="pillar reveal" data-delay="500">
+          <div class="pillar-icon">❤️</div>
+          <h3>Pasión por lo que hacemos</h3>
+          <p>Cada show lo vivimos como si fuera el más importante. Porque para ti, lo es.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIOS ── -->
+  <section class="section testimonios" id="testimonios">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Lo que dicen nuestros clientes</p>
+        <h2 class="section-title">Experiencias reales</h2>
+      </div>
+      <div class="testimonios-grid">
+        <div class="testimonio-card reveal" data-delay="0">
+          <div class="stars">★★★★★</div>
+          <p>"La hora loca de mi boda fue INCREÍBLE. Los robots LED y los bailarines lo dieron todo. Mis invitados no paraban de hablar de eso semanas después."</p>
+          <div class="testimonio-author">
+            <div class="author-avatar">M</div>
+            <div>
+              <strong>María C.</strong>
+              <span>Boda — Lima</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonio-card reveal featured-test" data-delay="150">
+          <div class="stars">★★★★★</div>
+          <p>"El ingreso de mi quinceañera fue el momento más emocionante de mi vida. Coreografía perfecta, música que me representaba y profesionalismo total desde el primer día."</p>
+          <div class="testimonio-author">
+            <div class="author-avatar">S</div>
+            <div>
+              <strong>Sofía R.</strong>
+              <span>Quinceañera — Lima</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonio-card reveal" data-delay="300">
+          <div class="stars">★★★★★</div>
+          <p>"Contratamos la hora loca para el cumpleaños de mi hijo de 8 años. Los niños quedaron fascinados con las mascotas. ¡El mejor dinero invertido de la fiesta!"</p>
+          <div class="testimonio-author">
+            <div class="author-avatar">P</div>
+            <div>
+              <strong>Patricia V.</strong>
+              <span>Cumpleaños Infantil — Lima</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACTO ── -->
+  <section class="section contacto" id="contacto">
+    <div class="container">
+      <div class="contacto-wrapper reveal">
+        <div class="contacto-text">
+          <p class="section-eyebrow">¿Listo para el show?</p>
+          <h2 class="section-title">Reserva tu fecha</h2>
+          <p class="body-text">
+            Cuéntanos sobre tu evento y te preparamos una propuesta personalizada. 
+            ¡Disponibilidad limitada, no dejes pasar tu fecha!
+          </p>
+          <div class="contact-channels">
+            <a href="https://wa.me/51920180520" target="_blank" class="channel-btn whatsapp">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              +51 920 180 520
+            </a>
+            <a href="https://instagram.com/kayriessence" target="_blank" class="channel-btn instagram">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              @kayriessence
+            </a>
+          </div>
+        </div>
+        <form class="contacto-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Tu nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="María García" required />
+            </div>
+            <div class="form-group">
+              <label for="telefono">WhatsApp</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+51 999 999 999" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="evento">Tipo de evento</label>
+            <select id="evento" name="evento" required>
+              <option value="" disabled selected>Selecciona tu evento</option>
+              <option>Boda</option>
+              <option>Quinceañera (15 años)</option>
+              <option>Cumpleaños 18 años</option>
+              <option>Cumpleaños infantil</option>
+              <option>Cumpleaños adulto</option>
+              <option>Evento corporativo</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="servicio">Show de interés</label>
+            <select id="servicio" name="servicio" required>
+              <option value="" disabled selected>¿Qué show necesitas?</option>
+              <option>Hora Loca</option>
+              <option>Hora Loca Infantil</option>
+              <option>Show de Ingreso — Quinceañera</option>
+              <option>Show de Ingreso — 18 Años</option>
+              <option>Maestro de Ceremonias</option>
+              <option>Coreografía Especial</option>
+              <option>Paquete completo</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fecha">Fecha del evento</label>
+            <input type="date" id="fecha" name="fecha" required />
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Cuéntanos más (opcional)</label>
+            <textarea id="mensaje" name="mensaje" rows="3" placeholder="Tema, cantidad de invitados, lugar..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span>Enviar por WhatsApp</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <svg class="footer-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="-60 -140 120 250" role="img" aria-label="Kayri Essence">
+          <defs>
+            <linearGradient id="gKf" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%"   stop-color="#F7C832"/>
+              <stop offset="40%"  stop-color="#D040B0"/>
+              <stop offset="100%" stop-color="#38D4F5"/>
+            </linearGradient>
+            <linearGradient id="gCrf" x1="20%" y1="0%" x2="80%" y2="100%">
+              <stop offset="0%"   stop-color="#F7C832"/>
+              <stop offset="100%" stop-color="#C88A10"/>
+            </linearGradient>
+            <linearGradient id="gArcf" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%"  stop-color="#D040B0"/>
+              <stop offset="100%" stop-color="#38D4F5"/>
+            </linearGradient>
+          </defs>
+          <path d="M-36,-76 Q0,-88 36,-76" fill="none" stroke="url(#gArcf)" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M-34,-78 L-34,-108 L-18,-94 L0,-120 L18,-94 L34,-108 L34,-78"
+                fill="none" stroke="url(#gCrf)" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="-34" cy="-110" r="3"   fill="#F7C832"/>
+          <circle cx="0"   cy="-122" r="3.5" fill="#F7C832"/>
+          <circle cx="34"  cy="-110" r="3"   fill="#F7C832"/>
+          <rect x="-44" y="-90" width="20" height="180" rx="5" fill="url(#gKf)"/>
+          <polygon points="-24,-8  -24,14  44,-68  44,-90" fill="url(#gKf)"/>
+          <polygon points="-24,8  -24,-14  44,68  44,90"   fill="url(#gKf)"/>
+        </svg>
+          <p>Shows profesionales para bodas, quinceañeras, cumpleaños y más. Lima, Perú.</p>
+        </div>
+        <div class="footer-links-group">
+          <h4>Shows</h4>
+          <ul>
+            <li><a href="#servicios">Hora Loca</a></li>
+            <li><a href="#servicios">Hora Loca Infantil</a></li>
+            <li><a href="#servicios">Shows de Ingreso</a></li>
+            <li><a href="#servicios">Maestro de Ceremonias</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/51920180520">+51 920 180 520</a></li>
+            <li><a href="https://instagram.com/kayriessence">@kayriessence</a></li>
+            <li><a href="#">KAYRI ESSENCE en Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Kayri Essence · Todos los derechos reservados · Lima, Perú</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
